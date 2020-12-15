@@ -42,4 +42,6 @@
         </div>
     </form>
 
+    <a href="/forgot-password">Forgot Password?</a>
+
 </x-guest-layout>
