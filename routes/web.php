@@ -17,18 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth', 'verified'])->get('/dashboard', function () {
+Route::middleware(['auth'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth', 'verified', 'password.confirm'])->get('/profile', function () {
+Route::middleware(['auth', 'password.confirm'])->get('/profile', function () {
     return view('profile');
 })->name('profile');
 
-Route::middleware(['auth', 'verified'])->get('/password', function () {
+Route::middleware(['auth'])->get('/password', function () {
     return view('password');
 })->name('password');
 
-Route::middleware(['auth', 'verified'])->get('/two-factor-auth', function () {
+Route::middleware(['auth'])->get('/two-factor-auth', function () {
     return view('two-factor-auth');
 })->name('two-factor-auth');
